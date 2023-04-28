@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Horário do país</title>
+</head>
+<body>
+	<h1>Horário do país</h1>
+	<label for="country">Escolha uma cidade:</label>
+	<select id="country">
+		<option value="America/New_York">Nova York</option>
+		<option value="Europe/London">Londres</option>
+		<option value="Europe/Paris">Paris</option>
+		<option value="Asia/Tokyo">Tóquio</option>
+	</select>
+	<p id="time"></p>
+
+	<script>
+		function mostrarHorario() {
+			const timeZone = document.getElementById("country").value;
+			const data = new Date().toLocaleString("pt-BR", {timeZone: timeZone});
+			document.getElementById("time").textContent = "O horário em " + timeZone + " é " + data;
+		}
+
+		document.getElementById("country").addEventListener("change", mostrarHorario);
+	</script>
+</body>
+</html>
