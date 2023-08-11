@@ -1,0 +1,46 @@
+create table funcionario(
+id_funcionario_pk int NOT NULL,
+nome VARCHAR(30) NOT null,
+departamento_fk int NOT NULL,
+salario int not null,
+data_admissao int NOT NULL,
+primary key (id_funcionario_pk),
+foreign key (departamento_fk) references departamento(id_departamento_pk)  
+)
+
+create table departamento(
+id_departamento_pk INT NOT NULL,
+local_ VARCHAR(30) NOT NULL,
+funcao VARCHAR(30) not null,
+primary key (id_departamento_pk)    
+)
+
+create table habilidade(
+id_funcionario_fk int not null,
+  id_habilidade_pk int not null,
+  descricao VARCHAR(30) not null,
+  primary key(id_habilidade_pk),
+  foreign key (id_funcionario_fk) references funcionario(id_funcionario_pk)
+)
+
+create table projeto(
+id_projeto_pk int not null,
+  trabalho VARCHAR(30) not null,
+  departamento VARCHAR(50) not null,
+  data_inicio VARCHAR(10) not null,
+  data_conclusao VARCHAR(10) not null,
+  primary key(id_projeto_pk)  
+)
+
+
+insert into funcionario(id_funcionario_pk, nome, departamento_fk, salario, data_admissao)
+VALUES ('1', 'João Silva', '01', '5000', '15012019')
+   
+    insert into departamento(id_departamento_pk, local_, funcao)
+VALUES ('1', 'predio A', 'RH')
+   
+    insert into habilidade(id_funcionario_fk, id_habilidade_pk, descricao)
+VALUES ('1', '1', 'Programação')
+   
+    insert into projeto(id_projeto_pk, trabalho, departamento, data_inicio, data_conclusao)
+VALUES ('1', 'projeto A', 'Desenvolvimento', '15/01/2020', '30/03/2021')
