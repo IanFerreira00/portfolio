@@ -1,0 +1,24 @@
+.botao-muda-cor{
+ padding:20px;
+ border-radius: 20px;
+ font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.botao-muda-cor:hover {
+    background-color: #63b929;
+    border-radius: 20px;   
+}
+
+
+body {
+    transition: background-color 0.1s; 
+    text-align: center;
+    padding: 30px;
+}
+
+
+.cor-alterada {
+    background-color: #3aafc4;
+}
+
+h1{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serifx';
