@@ -1,2 +1,0 @@
-Esse trabalho foi feito para apresentação no Mundo Senai.
-Onde havíamos montado um robô que utiliza um sensor para se locomover. 
